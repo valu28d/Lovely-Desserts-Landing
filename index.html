@@ -48,10 +48,8 @@
                         <a href="#sobre-nosotros" class="text-gray-700 hover:text-rose-600 lg:py-0">Sobre Nosotros</a>
                         <a href="#productos" class="text-gray-700 hover:text-rose-600 lg:py-0">Productos</a>
                         <a href="#nuestros-servicios" class="text-gray-700 hover:text-rose-600 lg:py-0">Servicios</a>
-                        <a href="#formulario-pedido" class="text-gray-700 hover:text-rose-600 lg:py-0">Formulario de
-                            Pedido</a>
-                        <a href="#pedidos-recientes" class="text-gray-700 hover:text-rose-600 lg:py-0">Pedidos Recientes</a>
-                        <a href="#contacto" class="text-gray-700 hover:text-rose-600 lg:py-0">Contacto</a>
+                        <a href="#formulario-contacto" class="text-gray-700 hover:text-rose-600 lg:py-0">Contacto</a>
+                        <a href="#mensajes-recientes" class="text-gray-700 hover:text-rose-600 lg:py-0">Mensajes</a>
                     </div>
                 </div>
             </div>
@@ -262,18 +260,18 @@
         </div>
     </section>
 
-    <!-- Formulario de Pedido Section -->
-    <section id="formulario-pedido" class="py-16 bg-rose-50">
+    <!-- Formulario de Contacto Section -->
+    <section id="formulario-contacto" class="py-16 bg-rose-50">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
             <div class="text-center mb-12">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-700 ">Realiza tu Pedido</h2>
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-700 ">Contáctanos</h2>
                 <p class="font-light text-black-600 lg:text-xl max-w-2xl mx-auto">
-                    Completa el formulario y nos pondremos en contacto contigo 
+                    ¿Tienes alguna pregunta o sugerencia? Envíanos un mensaje
                 </p>
             </div>
 
             <div class="max-w-3xl mx-auto">
-                <form id="pedido-form" class="bg-gray-800 rounded-lg shadow-md p-6 lg:p-8">
+                <form id="contacto-form" class="bg-gray-800 rounded-lg shadow-md p-6 lg:p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <!-- Nombre -->
                         <div>
@@ -294,62 +292,38 @@
                                 class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
                                 placeholder="tu@email.com">
                         </div>
-
-                        <!-- Teléfono -->
-                        <div>
-                            <label for="telefono" class="block mb-2 text-sm font-medium text-white">
-                                Teléfono <span class="text-rose-400">*</span>
-                            </label>
-                            <input type="tel" id="telefono" name="telefono" required
-                                class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
-                                placeholder="0999-999-999">
-                        </div>
-
-                        <!-- Cantidad -->
-                        <div>
-                            <label for="cantidad" class="block mb-2 text-sm font-medium text-white">
-                                Cantidad <span class="text-rose-400">*</span>
-                            </label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" value="1" required
-                                class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400">
-                        </div>
                     </div>
 
-                    <!-- Seleccionar Postre (ancho completo) -->
+                    <!-- Asunto (ancho completo) -->
                     <div class="mb-6">
-                        <label for="postre" class="block mb-2 text-sm font-medium text-white">
-                            Selecciona tu Postre <span class="text-rose-400">*</span>
+                        <label for="asunto" class="block mb-2 text-sm font-medium text-white">
+                            Asunto <span class="text-rose-400">*</span>
                         </label>
-                        <select id="postre" name="postre" required
+                        <select id="asunto" name="asunto" required
                             class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5">
-                            <option value="">-- Selecciona un postre --</option>
-                            <option value="Tres Leches">Tres Leches</option>
-                            <option value="Brownie">Brownie</option>
-                            <option value="Brookies">Brookies</option>
-                            <option value="Flan de Queso">Flan de Queso</option>
-                            <option value="Tiramisú">Tiramisú</option>
-                            <option value="Galletas Artesanales">Galletas Artesanales</option>
-                            <option value="Tres Leches de Tiramisú">Tres Leches de Tiramisú</option>
-                            <option value="Yemitas Caramelizadas">Yemitas Caramelizadas</option>
-                            <option value="Trufas de Chocolate">Trufas de Chocolate</option>
+                            <option value="">-- Selecciona un asunto --</option>
+                            <option value="Consulta General">Consulta General</option>
+                            <option value="Pedido Especial">Pedido Especial</option>
+                            <option value="Sugerencia">Sugerencia</option>
+                            <option value="Queja o Reclamo">Queja o Reclamo</option>
                         </select>
                     </div>
 
                     <!-- Mensaje -->
                     <div class="mb-6">
                         <label for="mensaje" class="block mb-2 text-sm font-medium text-white">
-                            Mensaje o Instrucciones Especiales
+                            Mensaje <span class="text-rose-400">*</span>
                         </label>
-                        <textarea id="mensaje" name="mensaje" rows="4"
+                        <textarea id="mensaje" name="mensaje" rows="4" required
                             class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
-                            placeholder="¿Alguna indicación especial para tu pedido?"></textarea>
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
                     </div>
 
                     <!-- Botón -->
                     <div class="text-center">
                         <button type="submit"
                             class="text-white bg-rose-600 hover:bg-rose-700 focus:ring-4 focus:ring-rose-300 font-medium rounded-lg text-sm px-8 py-3 dark:bg-rose-600 dark:hover:bg-rose-700 focus:outline-none dark:focus:ring-rose-800">
-                            Realizar Pedido
+                            Enviar Mensaje
                         </button>
                     </div>
                 </form>
@@ -357,21 +331,21 @@
         </div>
     </section>
 
-    <!-- Pedidos Recientes Section (fetch GET) -->
-    <section id="pedidos-recientes" class="py-16 bg-white">
+    <!-- Mensajes Recientes Section (fetch GET) -->
+    <section id="mensajes-recientes" class="py-16 bg-white">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
             <div class="text-center mb-12">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-700">Pedidos Recientes</h2>
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-700">Tus Mensajes Enviados</h2>
                 <p class="font-light text-gray-600 lg:text-xl max-w-2xl mx-auto">
-                    Estos son algunos de los pedidos más recientes realizados por nuestros clientes
+                    Aquí puedes ver los mensajes que has enviado
                 </p>
             </div>
 
-            <!-- Contenedor donde se mostrarán los pedidos -->
-            <div id="pedidos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Los pedidos se cargarán aquí dinámicamente -->
+            <!-- Contenedor donde se mostrarán los mensajes -->
+            <div id="mensajes-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Los mensajes se cargarán aquí dinámicamente -->
                 <div class="text-center col-span-full py-8">
-                    <p class="text-gray-500">Cargando pedidos...</p>
+                    <p class="text-gray-500">Cargando mensajes...</p>
                 </div>
             </div>
         </div>
@@ -390,7 +364,6 @@
         </div>
     </footer>
 
-    <!-- Flowbite JavaScript -->
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
 </body>
 
