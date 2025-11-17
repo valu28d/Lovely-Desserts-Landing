@@ -25,14 +25,14 @@
 
 <body>
     <header class="fixed w-full z-50">
-        <nav class="bg-pink-100 bg-opacity-90 py-4 shadow-md backdrop-blur-sm">
+        <nav class="bg-rose-100 bg-opacity-90 py-4 shadow-md backdrop-blur-sm">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto lg:px-6">
                 <a href="#" class="flex items-center">
-                    <h1 class="text-3xl font-bold text-pink-700 m-0">Lovely Desserts</h1>
+                    <h1 class="text-3xl font-bold text-rose-700 m-0">Lovely Desserts</h1>
                 </a>
 
                 <button data-collapse-toggle="menu-principal" type="button"
-                    class="inline-flex items-center p-2 mr-4 text-pink-600 rounded-lg lg:hidden hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    class="inline-flex items-center p-2 mr-4 text-rose-600 rounded-lg lg:hidden hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300"
                     aria-controls="menu-principal" aria-expanded="false">
                     <span class="sr-only">Abrir menú</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -45,14 +45,13 @@
                 <div class="hidden w-full lg:flex lg:w-auto" id="menu-principal">
                     <div
                         class="flex flex-col lg:flex-row lg:mx-auto lg:p-0 p-4 font-medium space-y-2 lg:space-y-0 lg:space-x-8 mt-4 lg:mt-0">
-                        <a href="#sobre-nosotros" class="text-gray-700 hover:text-pink-600 lg:py-0">Sobre Nosotros</a>
-                        <a href="#nuestros-productos" class="text-gray-700 hover:text-pink-600 lg:py-0">Nuestros
-                            Productos</a>
-                        <a href="productos" class="text-gray-700 hover:text-pink-600 lg:py-0">Productos</a>
-                        <a href="#nuestros-servicios" class="text-gray-700 hover:text-pink-600 lg:py-0">Servicios</a>
-                        <a href="#formulario-pedido" class="text-gray-700 hover:text-pink-600 lg:py-0">Formulario de
+                        <a href="#sobre-nosotros" class="text-gray-700 hover:text-rose-600 lg:py-0">Sobre Nosotros</a>
+                        <a href="#productos" class="text-gray-700 hover:text-rose-600 lg:py-0">Productos</a>
+                        <a href="#nuestros-servicios" class="text-gray-700 hover:text-rose-600 lg:py-0">Servicios</a>
+                        <a href="#formulario-pedido" class="text-gray-700 hover:text-rose-600 lg:py-0">Formulario de
                             Pedido</a>
-                        <a href="#contacto" class="text-gray-700 hover:text-pink-600 lg:py-0">Contacto</a>
+                        <a href="#pedidos-recientes" class="text-gray-700 hover:text-rose-600 lg:py-0">Pedidos Recientes</a>
+                        <a href="#contacto" class="text-gray-700 hover:text-rose-600 lg:py-0">Contacto</a>
                     </div>
                 </div>
             </div>
@@ -60,93 +59,29 @@
     </header>
 
     <!-- Sobre Nosotros Section -->
-    <section id="sobre-nosotros" class="bg-gradient-to-b from-pink-50 to-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1
-                    class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-pink-900 dark:text-white">
-                    Delicious Homemade Desserts</h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    Experience the sweetest moments with our handcrafted desserts. Made with love, delivered with care.
-                </p>
-                <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                    <a href="#"
-                        class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-pink-700 border border-pink-300 rounded-lg sm:w-auto hover:bg-pink-50 focus:ring-4 focus:ring-pink-200 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                        View Menu
-                    </a>
-                    <a href="#"
-                        class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-white bg-pink-600 border border-pink-600 rounded-lg sm:w-auto focus:outline-none hover:bg-pink-700 focus:z-10 focus:ring-4 focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700">
-                        Order Now
-                    </a>
-                </div>
-            </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <!-- Hero image placeholder - agrega tu imagen después -->
-                <div
-                    class="w-full h-96 bg-pink-100 rounded-lg dark:bg-gray-700 flex items-center justify-center border-2 border-pink-200">
-                    <span class="text-pink-400">Hero Image Here</span>
-                </div>
-            </div>
+    <section id="sobre-nosotros" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('/imagenes/image.png');">
+        <!-- Overlay oscuro para mejorar legibilidad -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+        <!-- Contenido -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                Postres Artesanales con Amor
+            </h1>
+            <p class="text-xl md:text-2xl text-white font-light opacity-90">
+                Creamos dulces momentos con ingredientes frescos y recetas hechas con dedicación
+            </p>
+            <p class="text-lg md:text-xl text-white font-light italic opacity-80 mt-4">
+                - María José Mora
+            </p>
         </div>
     </section>
 
-    <!-- Nuestros Productos -->
-    <section id="nuestros-productos" class="bg-pink-50 dark:bg-gray-800">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
-            <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <div class="text-gray-600 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-pink-900 dark:text-white">Crafted with
-                        Love</h2>
-                    <p class="mb-8 font-light lg:text-xl">Every dessert we create is made with the finest ingredients
-                        and lots of love. From classic favorites to innovative creations, we've got something for every
-                        sweet tooth.</p>
-                    <ul role="list" class="pt-8 space-y-5 border-t border-pink-200 my-7 dark:border-gray-700">
-                        <li class="flex space-x-3">
-                            <svg class="flex-shrink-0 w-5 h-5 text-pink-500 dark:text-pink-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-base font-medium leading-tight text-pink-900 dark:text-white">Fresh
-                                ingredients daily</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <svg class="flex-shrink-0 w-5 h-5 text-pink-500 dark:text-pink-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-base font-medium leading-tight text-pink-900 dark:text-white">Handmade
-                                with care</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <svg class="flex-shrink-0 w-5 h-5 text-pink-500 dark:text-pink-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-base font-medium leading-tight text-pink-900 dark:text-white">Custom
-                                orders available</span>
-                        </li>
-                    </ul>
-                    <p class="mb-8 font-light lg:text-xl">We deliver sweetness right to your door!</p>
-                </div>
-                <!-- Feature image placeholder -->
-                <div
-                    class="w-full h-96 bg-pink-100 rounded-lg dark:bg-gray-700 flex items-center justify-center border-2 border-pink-200">
-                    <span class="text-pink-400">Feature Image Here</span>
-                </div>
-            </div>
-        </div>
-    </section>
     <!--Productos disponibles-->
     <section id="productos" class="py-16 bg-rose-50">
         <div class="max-w-6xl mx-auto px-6">
 
-            <h2 class="text-4xl font-bold text-center text-pink-600 mb-12">Nuestros Postres</h2>
+            <h2 class="text-4xl font-bold text-center text-rose-600 mb-12">Nuestros Postres</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- CARD 1: Tres Leches -->
@@ -166,7 +101,7 @@
                     </span>
                     <h3 class="text-xl font-semibold text-stone-700 mt-3">Brownie</h3>
                     <p class="text-stone-500 text-sm mt-2">Chocolate intenso con textura húmeda.</p>
-                    <img src="imagenes/brownie.png" class="w-full h-48 object-cover rounded-xl mt-5">
+                    <img src="/imagenes/brownie.png" class="w-full h-48 object-cover rounded-xl mt-5">
                 </div>
 
                 <!-- CARD 3: Brookies -->
@@ -176,7 +111,7 @@
                     </span>
                     <h3 class="text-xl font-semibold text-stone-700 mt-3">Brookies</h3>
                     <p class="text-stone-500 text-sm mt-2">Mezcla perfecta entre brownie y galleta.</p>
-                    <img src="imagenes/brookies.png" class="w-full h-48 object-cover rounded-xl mt-5">
+                    <img src="/imagenes/brookies.png" class="w-full h-48 object-cover rounded-xl mt-5">
                 </div>
 
                 <!-- CARD 4: Flan de Queso -->
@@ -243,17 +178,202 @@
             </div>
         </div>
     </section>
-    <!-- Nuestros Servicios Section -->
-    <section id="nuestros-servicios" class="bg-white dark:bg-gray-900">
+
+    <!-- Nuestros Servicios -->
+    <section id="nuestros-servicios" class="bg-white dark:bg-gray-800">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
-            <!-- Contenido de servicios aquí -->
+            <div class="text-center mb-12">
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-900 dark:text-white">¿Qué Ofrecemos?</h2>
+                <p class="font-light text-gray-600 dark:text-gray-400 lg:text-xl max-w-3xl mx-auto">
+                    En Lovely Desserts, nos dedicamos a crear postres artesanales con ingredientes frescos y de la más alta calidad.
+                    Cada dulce es elaborado con amor y dedicación para hacer de tus momentos especiales algo inolvidable.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Ingredientes Frescos -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-rose-100">
+                            <svg class="w-6 h-6 text-rose-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-2 text-xl font-bold text-rose-900 dark:text-white">Ingredientes Frescos</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Utilizamos ingredientes frescos diariamente para garantizar el mejor sabor y calidad en cada postre.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hecho a Mano -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-rose-100">
+                            <svg class="w-6 h-6 text-rose-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-2 text-xl font-bold text-rose-900 dark:text-white">Hecho a Mano</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Cada postre es elaborado artesanalmente con cuidado y dedicación, siguiendo recetas perfeccionadas con el tiempo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pedidos Personalizados -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-rose-100">
+                            <svg class="w-6 h-6 text-rose-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-2 text-xl font-bold text-rose-900 dark:text-white">Pedidos Personalizados</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Ofrecemos la posibilidad de personalizar tus postres según tus preferencias y necesidades especiales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entrega a Domicilio -->
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-rose-100">
+                            <svg class="w-6 h-6 text-rose-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-2 text-xl font-bold text-rose-900 dark:text-white">Entrega a Domicilio</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Llevamos la dulzura directamente a tu puerta para que disfrutes sin complicaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Formulario de Pedido Section -->
-    <section id="formulario-pedido" class="bg-gradient-to-r from-pink-100 to-pink-50 dark:bg-gray-800">
+    <section id="formulario-pedido" class="py-16 bg-rose-50">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
-            <!-- Contenido del formulario aquí -->
+            <div class="text-center mb-12">
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-700 ">Realiza tu Pedido</h2>
+                <p class="font-light text-black-600 lg:text-xl max-w-2xl mx-auto">
+                    Completa el formulario y nos pondremos en contacto contigo 
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <form id="pedido-form" class="bg-gray-800 rounded-lg shadow-md p-6 lg:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <!-- Nombre -->
+                        <div>
+                            <label for="nombre" class="block mb-2 text-sm font-medium text-white">
+                                Nombre Completo <span class="text-rose-400">*</span>
+                            </label>
+                            <input type="text" id="nombre" name="nombre" required
+                                class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
+                                placeholder="Tu nombre">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-white">
+                                Email <span class="text-rose-400">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
+                                placeholder="tu@email.com">
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div>
+                            <label for="telefono" class="block mb-2 text-sm font-medium text-white">
+                                Teléfono <span class="text-rose-400">*</span>
+                            </label>
+                            <input type="tel" id="telefono" name="telefono" required
+                                class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
+                                placeholder="0999-999-999">
+                        </div>
+
+                        <!-- Cantidad -->
+                        <div>
+                            <label for="cantidad" class="block mb-2 text-sm font-medium text-white">
+                                Cantidad <span class="text-rose-400">*</span>
+                            </label>
+                            <input type="number" id="cantidad" name="cantidad" min="1" value="1" required
+                                class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400">
+                        </div>
+                    </div>
+
+                    <!-- Seleccionar Postre (ancho completo) -->
+                    <div class="mb-6">
+                        <label for="postre" class="block mb-2 text-sm font-medium text-white">
+                            Selecciona tu Postre <span class="text-rose-400">*</span>
+                        </label>
+                        <select id="postre" name="postre" required
+                            class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5">
+                            <option value="">-- Selecciona un postre --</option>
+                            <option value="Tres Leches">Tres Leches</option>
+                            <option value="Brownie">Brownie</option>
+                            <option value="Brookies">Brookies</option>
+                            <option value="Flan de Queso">Flan de Queso</option>
+                            <option value="Tiramisú">Tiramisú</option>
+                            <option value="Galletas Artesanales">Galletas Artesanales</option>
+                            <option value="Tres Leches de Tiramisú">Tres Leches de Tiramisú</option>
+                            <option value="Yemitas Caramelizadas">Yemitas Caramelizadas</option>
+                            <option value="Trufas de Chocolate">Trufas de Chocolate</option>
+                        </select>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="mb-6">
+                        <label for="mensaje" class="block mb-2 text-sm font-medium text-white">
+                            Mensaje o Instrucciones Especiales
+                        </label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-gray-400"
+                            placeholder="¿Alguna indicación especial para tu pedido?"></textarea>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="text-center">
+                        <button type="submit"
+                            class="text-white bg-rose-600 hover:bg-rose-700 focus:ring-4 focus:ring-rose-300 font-medium rounded-lg text-sm px-8 py-3 dark:bg-rose-600 dark:hover:bg-rose-700 focus:outline-none dark:focus:ring-rose-800">
+                            Realizar Pedido
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedidos Recientes Section (fetch GET) -->
+    <section id="pedidos-recientes" class="py-16 bg-white">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-rose-700">Pedidos Recientes</h2>
+                <p class="font-light text-gray-600 lg:text-xl max-w-2xl mx-auto">
+                    Estos son algunos de los pedidos más recientes realizados por nuestros clientes
+                </p>
+            </div>
+
+            <!-- Contenedor donde se mostrarán los pedidos -->
+            <div id="pedidos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Los pedidos se cargarán aquí dinámicamente -->
+                <div class="text-center col-span-full py-8">
+                    <p class="text-gray-500">Cargando pedidos...</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -261,22 +381,22 @@
     <section class="bg-white dark:bg-gray-800">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
             <div class="max-w-screen-sm mx-auto text-center">
-                <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-pink-900 dark:text-white">
+                <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-rose-900 dark:text-white">
                     Order your favorite desserts today</h2>
                 <p class="mb-6 font-light text-gray-600 dark:text-gray-400 md:text-lg">Satisfaction guaranteed with
                     every bite!</p>
                 <a href="#"
-                    class="text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-pink-600 dark:hover:bg-pink-700 focus:outline-none dark:focus:ring-pink-800">Place
+                    class="text-white bg-rose-600 hover:bg-rose-700 focus:ring-4 focus:ring-rose-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-rose-600 dark:hover:bg-rose-700 focus:outline-none dark:focus:ring-rose-800">Place
                     Your Order</a>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="bg-pink-50 dark:bg-gray-800 border-t border-pink-100">
+    <footer id="contacto" class="bg-rose-50 dark:bg-gray-800 border-t border-rose-100">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
             <div class="text-center">
                 <a href="#"
-                    class="flex items-center justify-center mb-5 text-2xl font-semibold text-pink-900 dark:text-white">
+                    class="flex items-center justify-center mb-5 text-2xl font-semibold text-rose-900 dark:text-white">
                     Lovely Desserts
                 </a>
                 <span class="block text-sm text-center text-gray-600 dark:text-gray-400">© 2024 Lovely Desserts™. All
