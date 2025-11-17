@@ -1,18 +1,16 @@
 import './style.css'
 
-// Array para almacenar los mensajes enviados
-let mensajesEnviados = [];
+//POST//
 
-// === MANEJO DEL FORMULARIO DE CONTACTO ===
-// Obtener el formulario del DOM
+// para almacenar los mensajes enviados
+let mensajesEnviados = [];
 const form = document.getElementById('contacto-form');
 
-// Agregar evento de envío al formulario
+// evento de envio al formulario
 form.addEventListener('submit', async (e) => {
-  // Prevenir el envío tradicional del formulario (recarga de página)
-  e.preventDefault();
+  e.preventDefault(); //para que no se recargue la pagina
 
-  // Recolectar todos los datos del formulario
+  //datos del forms
   const formData = {
     nombre: document.getElementById('nombre').value,
     email: document.getElementById('email').value,
@@ -21,50 +19,41 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    // Enviar petición POST a la API
-    // JSONPlaceholder es una API de prueba que simula respuestas
+    // enviar petición POST a la APIJSONPlaceholder que es una API de prueba que simula respuestas
     const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json' // Indicamos que enviamos JSON
+        'Content-Type': 'application/json' // enviamos JSON
       },
-      body: JSON.stringify(formData) // Convertir objeto a JSON
+      body: JSON.stringify(formData) // convertir objeto a JSON
     });
 
-    // Convertir la respuesta a JSON
+   //respuesta a json
     const data = await response.json();
 
-    // Si la respuesta es exitosa (status 200-299)
     if (response.ok) {
-      alert('✓ ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.');
+      alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.');
       console.log('Respuesta del servidor:', data);
 
-      // Agregar el mensaje al array de mensajes enviados
-      mensajesEnviados.unshift(formData); // unshift agrega al inicio del array
+      mensajesEnviados.unshift(formData); // unshift agrega al inicio del array de los mensajes enviados
 
-      // Actualizar la visualización de mensajes recientes
-      mostrarMensajesRecientes();
+      mostrarMensajesRecientes(); //actualizar y aqui se ejecuta lo del get
 
-      form.reset(); // Limpiar el formulario
+      form.reset(); 
     }
   } catch (error) {
-    // Manejo de errores (problemas de red, servidor caído, etc.)
-    alert('✗ Error al enviar el mensaje. Por favor, intenta nuevamente.');
     console.error('Error:', error);
   }
 });
 
-// === OBTENER Y MOSTRAR MENSAJES RECIENTES (fetch GET) ===
-// Esta función se ejecuta cuando la página carga
+// GET // se ejecuta cuando la pag carga
 async function cargarMensajesRecientes() {
-  // Obtener el contenedor donde se mostrarán los mensajes
   const container = document.getElementById('mensajes-container');
-
   try {
     // Limpiar el mensaje de "Cargando..."
     container.innerHTML = '';
 
-    // Si no hay mensajes del usuario, mostrar mensaje inicial
+    // si no hay mensajes del usuario, mostrar mensaje inicial
     if (mensajesEnviados.length === 0) {
       container.innerHTML = `
         <div class="col-span-full text-center py-8">
@@ -74,7 +63,7 @@ async function cargarMensajesRecientes() {
       return;
     }
 
-    // Mostrar los mensajes enviados por el usuario
+    // mensajes enviados por el usuario
     mensajesEnviados.forEach((mensaje, index) => {
       const card = `
         <div class="bg-rose-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-2 border-rose-300">
@@ -96,7 +85,7 @@ async function cargarMensajesRecientes() {
     });
 
   } catch (error) {
-    // Si hay error, mostrar mensaje
+    // mensaje de error
     container.innerHTML = `
       <div class="col-span-full text-center py-8">
         <p class="text-red-600">Error al cargar los mensajes. Por favor, recarga la página.</p>
@@ -106,14 +95,12 @@ async function cargarMensajesRecientes() {
   }
 }
 
-// Función para mostrar solo los mensajes enviados por el usuario
+// para mostrar solo los mensajes enviados por el usuario
 function mostrarMensajesRecientes() {
   const container = document.getElementById('mensajes-container');
-
-  // Limpiar contenedor
   container.innerHTML = '';
 
-  // Mostrar los mensajes del usuario
+  // mostrar los mensajes del usuario
   mensajesEnviados.forEach((mensaje, index) => {
     const card = `
       <div class="bg-rose-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-2 border-rose-300">
@@ -134,7 +121,7 @@ function mostrarMensajesRecientes() {
     container.innerHTML += card;
   });
 
-  // Si no hay mensajes del usuario, mostrar mensaje
+  // si no hay mensajes del usuario, mostrar mensaje
   if (mensajesEnviados.length === 0) {
     container.innerHTML = `
       <div class="col-span-full text-center py-8">
@@ -144,5 +131,5 @@ function mostrarMensajesRecientes() {
   }
 }
 
-// Ejecutar la función cuando la página termine de cargar
+// ejecutar la función cuando la página termine de cargar
 window.addEventListener('DOMContentLoaded', cargarMensajesRecientes);
