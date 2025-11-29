@@ -66,14 +66,9 @@ async function cargarMensajesRecientes() {
             <div class="w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center text-white font-bold">
               ✓
             </div>
-            <h3 class="text-lg font-bold text-rose-900">Mensaje</h3>
+            <h3 class="text-lg font-bold text-rose-900">${mensaje.asunto}</h3>
           </div>
-          <p class="text-gray-900 font-semibold mb-2">${mensaje.asunto}</p>
-          <p class="text-gray-700 text-sm mb-1"><strong>De:</strong> ${mensaje.nombre}</p>
-          <p class="text-gray-700 text-sm mb-1"><strong>Email:</strong> ${mensaje.email}</p>
-          <div class="mt-4 pt-4 border-t border-rose-200">
-            <p class="text-xs text-gray-600"><strong>Mensaje:</strong> ${mensaje.mensaje}</p>
-          </div>
+          <p class="text-gray-700 text-sm">${mensaje.mensaje}</p>
         </div>
       `;
       container.innerHTML += card;
